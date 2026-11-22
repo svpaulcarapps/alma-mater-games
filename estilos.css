@@ -5,7 +5,36 @@ main { width: min(96%, 78rem); margin: auto; padding: 0 0 2rem; }
 .portada::before, .portada::after { content: ""; position: absolute; inset-block: 0; width: 24%; z-index: -1; background-repeat: no-repeat; background-size: contain; }
 .portada::before { left: 0; background: url(personaje-izquierda.png) right bottom / contain no-repeat; }
 .portada::after { right: 0; background: url(personaje-derecha.png) left bottom / contain no-repeat; }
-h1 { margin: 0; text-align: center; width: 53%; font-size: clamp(1.7rem, 5vw, 4.9rem); line-height: .98; letter-spacing: -.05em; font-weight: 950; text-wrap: balance; }
+.marca {
+  margin: 0;
+  width: 53%;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.2rem, 4.5vw, 4.1rem);
+  font-weight: 900;
+  line-height: .93;
+  letter-spacing: .035em;
+  text-transform: uppercase;
+  color: #ffda74;
+  filter: drop-shadow(0 .2rem 0 #121f45) drop-shadow(0 .3rem .24rem #42260d55);
+}
+.marca span, .marca strong {
+  display: block;
+  padding-block: .035em;
+  background: linear-gradient(#fff2b6 8%, #ffd878 43%, #b66a0f 48%, #f2a93d 60%, #fff0a5 95%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: clamp(.5px, .11vw, 1.7px) #4b2912;
+}
+.marca strong {
+  font-size: 1.43em;
+  letter-spacing: .09em;
+  padding-inline-start: .09em;
+}
+@media (forced-colors: active) {
+  .marca { filter: none; }
+  .marca span, .marca strong { background: none; -webkit-text-fill-color: CanvasText; -webkit-text-stroke: 0; }
+}
 .juegos, .materias { display: grid; gap: clamp(.65rem, 1.8vw, 1.4rem); }
 .juegos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .juego { display: flex; flex-direction: column; align-items: center; gap: .85rem; text-align: center; padding: clamp(.8rem, 2.1vw, 1.6rem); border: 3px solid #e4aa25; border-radius: 1.8rem; box-shadow: 0 .35rem .85rem #56381746, inset 0 0 0 2px #ffe8a3; background: radial-gradient(ellipse at 50% 0%, var(--claro), var(--oscuro) 78%); }
