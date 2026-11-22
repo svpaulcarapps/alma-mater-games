@@ -2,10 +2,10 @@
 body { margin: 0; background: radial-gradient(ellipse at top, #fff9e7, #f0d8ae); color: #101a30; font-family: ui-rounded, "Arial Rounded MT Bold", system-ui, sans-serif; min-height: 100vh; }
 main { width: min(96%, 78rem); margin: auto; padding: 0 0 2rem; }
 .portada { position: relative; display: grid; place-items: center; isolation: isolate; min-height: clamp(8rem, 17vw, 14rem); overflow: hidden; }
-.portada::before, .portada::after { content: ""; position: absolute; inset-block: 0; width: 24%; z-index: -1; background-image: url(personajes-oaoa.webp); background-repeat: no-repeat; background-size: auto 170%; }
-.portada::before { left: 0; background-position: 15% top; }
-.portada::after { right: 0; background-position: 83% top; }
-h1 { margin: 0; text-align: center; width: 60%; font-size: clamp(2.05rem, 6vw, 5.7rem); line-height: .98; letter-spacing: -.05em; font-weight: 950; text-wrap: balance; }
+.portada::before, .portada::after { content: ""; position: absolute; inset-block: 0; width: 24%; z-index: -1; background-repeat: no-repeat; background-size: contain; }
+.portada::before { left: 0; background: url(personaje-izquierda.png) right bottom / contain no-repeat; }
+.portada::after { right: 0; background: url(personaje-derecha.png) left bottom / contain no-repeat; }
+h1 { margin: 0; text-align: center; width: 53%; font-size: clamp(1.7rem, 5vw, 4.9rem); line-height: .98; letter-spacing: -.05em; font-weight: 950; text-wrap: balance; }
 .juegos, .materias { display: grid; gap: clamp(.65rem, 1.8vw, 1.4rem); }
 .juegos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .juego { display: flex; flex-direction: column; align-items: center; gap: .85rem; text-align: center; padding: clamp(.8rem, 2.1vw, 1.6rem); border: 3px solid #e4aa25; border-radius: 1.8rem; box-shadow: 0 .35rem .85rem #56381746, inset 0 0 0 2px #ffe8a3; background: radial-gradient(ellipse at 50% 0%, var(--claro), var(--oscuro) 78%); }
@@ -25,4 +25,4 @@ h1 { margin: 0; text-align: center; width: 60%; font-size: clamp(2.05rem, 6vw, 5
 .materias h2 { margin: 0; font-size: clamp(1rem, 2vw, 1.5rem); }
 .materias p { margin: .15rem 0 0; color: #624725; font-size: .85rem; }
 @media (max-width: 55rem) { .materias { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 34rem) { .juegos { grid-template-columns: 1fr; } .portada::before, .portada::after { background-size: auto 125%; } }
+@media (max-width: 34rem) { .juegos { grid-template-columns: 1fr; } }
