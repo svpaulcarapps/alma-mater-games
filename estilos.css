@@ -1,0 +1,28 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: radial-gradient(ellipse at top, #fff9e7, #f0d8ae); color: #101a30; font-family: ui-rounded, "Arial Rounded MT Bold", system-ui, sans-serif; min-height: 100vh; }
+main { width: min(96%, 78rem); margin: auto; padding: 0 0 2rem; }
+.portada { position: relative; display: grid; place-items: center; isolation: isolate; min-height: clamp(8rem, 17vw, 14rem); overflow: hidden; }
+.portada::before, .portada::after { content: ""; position: absolute; inset-block: 0; width: 24%; z-index: -1; background-image: url(personajes-oaoa.webp); background-repeat: no-repeat; background-size: auto 170%; }
+.portada::before { left: 0; background-position: 15% top; }
+.portada::after { right: 0; background-position: 83% top; }
+h1 { margin: 0; text-align: center; width: 60%; font-size: clamp(2.05rem, 6vw, 5.7rem); line-height: .98; letter-spacing: -.05em; font-weight: 950; text-wrap: balance; }
+.juegos, .materias { display: grid; gap: clamp(.65rem, 1.8vw, 1.4rem); }
+.juegos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.juego { display: flex; flex-direction: column; align-items: center; gap: .85rem; text-align: center; padding: clamp(.8rem, 2.1vw, 1.6rem); border: 3px solid #e4aa25; border-radius: 1.8rem; box-shadow: 0 .35rem .85rem #56381746, inset 0 0 0 2px #ffe8a3; background: radial-gradient(ellipse at 50% 0%, var(--claro), var(--oscuro) 78%); }
+.mates { --claro: #1267e9; --oscuro: #061b73; --boton: #0648af; }
+.lengua { --claro: #c61c4a; --oscuro: #620824; --boton: #a30833; }
+.escudo { display: block; width: clamp(7rem, 22vw, 15rem); height: auto; aspect-ratio: 1; object-fit: contain; filter: drop-shadow(0 .25rem .28rem #0007); }
+.ficha { width: 100%; background: #fff0cb; padding: .65rem .7rem; border-radius: 1.1rem; flex: 1; }
+.ficha p { margin: .15rem 0; }
+.ficha p:first-child { font-weight: 800; color: #663f14; }
+.ficha h2 { font-size: clamp(1.35rem, 3vw, 2.65rem); line-height: 1.03; margin: .3rem 0; letter-spacing: -.035em; }
+.juego a { color: #fff; background: var(--boton); border: 2px solid #ffd975; border-radius: 3rem; padding: .55rem 1.7rem; font-size: clamp(1.25rem, 2.6vw, 1.9rem); font-weight: 850; text-decoration: none; box-shadow: 0 .22rem .3rem #0008; }
+.juego a:hover { filter: brightness(1.17); }
+.juego a:focus-visible { outline: 3px solid white; outline-offset: 4px; }
+.materias { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 1.25rem; }
+.materias article { display: flex; align-items: center; gap: .45rem; padding: .65rem; border: 2px solid #d9b88a; border-radius: 1.15rem; background: #fff6e3; }
+.materias img { width: clamp(2.8rem, 7.5vw, 6rem); aspect-ratio: 1; object-fit: contain; }
+.materias h2 { margin: 0; font-size: clamp(1rem, 2vw, 1.5rem); }
+.materias p { margin: .15rem 0 0; color: #624725; font-size: .85rem; }
+@media (max-width: 55rem) { .materias { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 34rem) { .juegos { grid-template-columns: 1fr; } .portada::before, .portada::after { background-size: auto 125%; } }
