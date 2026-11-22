@@ -9,27 +9,27 @@ main { width: min(96%, 78rem); margin: auto; padding: 0 0 2rem; }
   margin: 0;
   width: 53%;
   text-align: center;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Arial Rounded MT Bold", ui-rounded, "Trebuchet MS", system-ui, sans-serif;
   font-size: clamp(1.2rem, 4.5vw, 4.1rem);
   font-weight: 900;
-  line-height: .93;
-  letter-spacing: .035em;
-  text-transform: uppercase;
+  line-height: .95;
+  letter-spacing: -.035em;
   color: #ffda74;
-  filter: drop-shadow(0 .2rem 0 #121f45) drop-shadow(0 .3rem .24rem #42260d55);
+  filter: drop-shadow(0 .105em 0 #182755) drop-shadow(0 .07em .08em #42260d4d);
 }
 .marca span, .marca strong {
   display: block;
   padding-block: .035em;
-  background: linear-gradient(#fff2b6 8%, #ffd878 43%, #b66a0f 48%, #f2a93d 60%, #fff0a5 95%);
+  background: linear-gradient(#fff6ba 8%, #ffd75d 46%, #ffaf36 95%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: clamp(.5px, .11vw, 1.7px) #4b2912;
+  -webkit-text-stroke: clamp(.5px, .11vw, 1.7px) #183064;
 }
+.marca span { transform: rotate(-2deg); }
 .marca strong {
   font-size: 1.43em;
-  letter-spacing: .09em;
-  padding-inline-start: .09em;
+  letter-spacing: -.045em;
+  transform: rotate(2deg);
 }
 @media (forced-colors: active) {
   .marca { filter: none; }
