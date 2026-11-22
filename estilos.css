@@ -5,12 +5,14 @@ main { width: min(96%, 78rem); margin: auto; padding: 0 0 2rem; }
 .portada::before, .portada::after { content: ""; position: absolute; inset-block: 0; width: 24%; z-index: -1; background-repeat: no-repeat; background-size: contain; }
 .portada::before { left: 0; background: url(personaje-izquierda.png) right bottom / contain no-repeat; }
 .portada::after { right: 0; background: url(personaje-derecha.png) left bottom / contain no-repeat; }
+.identidad { display:flex; align-items:center; justify-content:center; gap:clamp(.3rem, 1.2vw, 1rem); width:53%; }
+.identidad img { display:block; width:clamp(3rem, 9vw, 8rem); height:auto; flex:none; filter:drop-shadow(0 .2rem .25rem #57391244); }
 .marca {
   margin: 0;
-  width: 53%;
+  min-width: 0;
   text-align: center;
   font-family: "Arial Rounded MT Bold", ui-rounded, "Trebuchet MS", system-ui, sans-serif;
-  font-size: clamp(1.2rem, 4.5vw, 4.1rem);
+  font-size: clamp(1.05rem, 4vw, 3.8rem);
   font-weight: 900;
   line-height: .95;
   letter-spacing: -.035em;
@@ -30,6 +32,10 @@ main { width: min(96%, 78rem); margin: auto; padding: 0 0 2rem; }
   font-size: 1.43em;
   letter-spacing: -.045em;
   transform: rotate(2deg);
+}
+@media (max-width: 43rem) {
+  .identidad { flex-direction:column; padding:.25rem 0 .45rem; }
+  .identidad img { width:clamp(3rem, 9vw, 4rem); }
 }
 @media (forced-colors: active) {
   .marca { filter: none; }
